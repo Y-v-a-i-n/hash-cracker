@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript" src="main.js"></script>
+        <title>Hash Cracker</title>
+    </head>
+    <body>
+        <center>
+            <h1>Hash Cracker</h1>
+            Hash : </br><input type="text" name="hash" class="form-control" id="hash" placeholder="Hash"></br>
+            Type : </br><p><select id="type" class="form-control" onchange="Update()">
+                <option value="1">NT</option>
+                <option value="2">LM</option>
+                <option value="3">MD2</option>
+                <option value="4">MD4</option>
+                <option value="5" selected>MD5</option>
+                <option value="6">SHA-1</option>
+                <option value="7">SHA-224</option>
+                <option value="8">SHA-256</option>
+                <option value="9">SHA-384</option>
+                <option value="10">SHA-512</option>
+                <option value="11">RIPEMD160</option>
+                <option value="12">WHIRLPOOL</option>
+            </select></p>
+            Maximum Length : </br><input type="number" name="maxLen" class="form-control" id="maxLen" value="4"></br>
+        </center>
+        <div class="form-group">
+            <input type="file" id="myFile" name="filename" onchange="ChangeWL()">
+            <div class="checkbox"><label><input id="lettersUpper" type="checkbox" name="lettersUpper">Upper Case (A-Z)</label></div>
+            <div class="checkbox"><label><input id="lettersLower" type="checkbox" name="lettersLower">Lower Case (a-z)</label></div>
+            <div class="checkbox"><label><input id="numbers" type="checkbox" name="numbers">Digits (0-9)</label></div>
+            <div class="checkbox"><label><input id="special" type="checkbox" name="special">Special (@, %, $, etc.)</label></div>
+            <div class="checkbox"><label><input id="whitespace" type="checkbox" name="whitespace">Whitespace (" ", \n, etc.)</label></div>
+        </div>
+        <center>
+            <button type="submit" id="button" onclick="Start()">Start</button>
+            <div class="col-sm-4">
+                Result : </br><input type="text" class="form-control" id="result" placeholder="Result" disabled>
+            </div>
+        </center>
+    </body>
+</html>
