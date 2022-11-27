@@ -15,7 +15,7 @@
 
 ![img](https://cdn.discordapp.com/attachments/1007360388117049487/1008805578757374053/unknown.png)
 
-### Comment lancer hash-cracker ? 
+### How to start hash-cracker ? 
 
 ```sh
 $ npm install electron -g
